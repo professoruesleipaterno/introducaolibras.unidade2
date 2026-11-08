@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introdução a Libras — Unidade 2</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+<style>
+:root {
+--ifsc-verde: #32A041;
+--ifsc-vermelho: #C8191E;
+--ifsc-preto: #000000;
+--ifsc-cinza: #808080;
+--ifsc-caixa: #F2F2F2;
+--ifsc-branco: #FFFFFF;
+--texto: #1a1a1a;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+font-family: 'Open Sans', Calibri, Arial, sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.7;
+color: var(--texto);
+background: var(--ifsc-branco);
+word-wrap: break-word;
+}
+.container {
+max-width: 900px;
+margin: 0 auto;
+padding-left: 24px;
+padding-right: 24px;
+}
+header.topo {
+background: var(--ifsc-branco);
+border-bottom: 4px solid var(--ifsc-verde);
+padding: 20px 0 16px;
+}
+.instituto {
+font-weight: 700;
+font-size: 13px;
+text-transform: uppercase;
+letter-spacing: 0.12em;
+color: var(--ifsc-preto);
+white-space: nowrap;
+margin: 0;
+}
+.campus {
+font-weight: 400;
+font-size: 12px;
+color: var(--ifsc-cinza);
+margin: 4px 0 0;
+}
+.hero {
+background: var(--ifsc-verde);
+color: var(--ifsc-branco);
+padding: 48px 32px;
+text-align: center;
+}
+.hero .eyebrow {
+font-weight: 700;
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 0.2em;
+opacity: 0.85;
+margin: 0 0 12px;
+}
+.hero h1 {
+font-weight: 700;
+font-size: 38px;
+line-height: 1.15;
+margin: 0;
+color: var(--ifsc-branco);
+}
+.hero .divisor {
+width: 40px;
+height: 3px;
+background: var(--ifsc-branco);
+margin: 20px auto;
+}
+.hero .disciplina {
+font-weight: 600;
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 0.15em;
+opacity: 0.9;
+margin: 0;
+}
+main.corpo {
+max-width: 900px;
+margin: 0 auto;
+padding: 40px 24px;
+text-align: justify;
+}
+h2 {
+font-weight: 700;
+font-size: 26px;
+color: var(--ifsc-verde);
+border-bottom: 2px solid var(--ifsc-verde);
+padding-bottom: 8px;
+margin: 48px 0 20px;
+text-align: left;
+}
+h3 {
+font-weight: 700;
+font-size: 19px;
+color: var(--ifsc-preto);
+margin: 36px 0 12px;
+text-align: left;
+}
+h4 {
+font-weight: 700;
+font-size: 16px;
+font-style: italic;
+color: var(--ifsc-vermelho);
+margin: 28px 0 10px;
+text-align: left;
+}
+p { margin: 0 0 16px; }
+ul {
+padding-left: 24px;
+margin: 0 0 16px;
+}
+ul li { margin-bottom: 8px; }
+.caixa-video {
+background: var(--ifsc-caixa);
+border-left: 4px solid var(--ifsc-verde);
+padding: 14px 18px;
+margin: 20px 0;
+border-radius: 0 4px 4px 0;
+text-align: left;
+}
+.caixa-video .rotulo {
+font-weight: 700;
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+color: var(--ifsc-verde);
+margin: 0 0 6px;
+}
+.caixa-video a {
+font-size: 13px;
+color: var(--ifsc-preto);
+text-decoration: underline;
+word-break: break-all;
+}
+.legenda-imagem {
+margin: 24px 0;
+text-align: center;
+}
+.espaco-imagem {
+border: 2px dashed #cccccc;
+background: #fafafa;
+min-height: 180px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #999;
+font-size: 13px;
+font-style: italic;
+margin-bottom: 8px;
+}
+.legenda-imagem .legenda {
+font-size: 13px;
+font-style: italic;
+color: var(--ifsc-cinza);
+text-align: center;
+margin: 0 0 4px;
+}
+.legenda-imagem .fonte {
+font-size: 11px;
+color: var(--ifsc-cinza);
+text-align: center;
+margin: 0;
+}
+.moodle {
+font-size: 13px;
+font-style: italic;
+color: var(--ifsc-cinza);
+margin: 12px 0;
+text-align: left;
+}
+.moodle::before { content: "🔗 "; font-style: normal; }
+footer.rodape {
+background: var(--ifsc-caixa);
+padding: 24px;
+text-align: center;
+font-size: 12px;
+color: var(--ifsc-cinza);
+line-height: 1.6;
+}
+footer.rodape p { margin: 0; text-align: center; }
+@media (max-width: 640px) {
+.hero { padding: 48px 16px; }
+.hero h1 { font-size: 28px; }
+.container { padding-left: 16px; padding-right: 16px; }
+main.corpo { padding: 40px 16px; }
+.instituto { white-space: normal; }
+}
+</style>
+</head>
+<body>
+<header class="topo">
+<div class="container">
+<p class="instituto">Instituto Federal de Santa Catarina</p>
+<p class="campus">Câmpus Florianópolis-Continente</p>
+</div>
+</header>
+
+<section class="hero">
+<p class="eyebrow">Unidade 2</p>
+<h1>Alfabeto manual e números</h1>
+<div class="divisor"></div>
+<p class="disciplina">Introdução a Libras</p>
+</section>
+
+<main class="corpo">
+
+<h2>1. Alfabeto Manual em Libras</h2>
+
+<h4>Por que começar pelas letras do alfabeto manual?</h4>
+
+<p>O alfabeto manual não é a Libras. É um recurso que liga a Libras ao português escrito, usado para nomes próprios, nomes de rua e palavras que ainda não têm sinal conhecido. Também serve para perguntar a um surdo qual é o sinal de determinada palavra. Você vai precisar do alfabeto manual muitas vezes, e é por isso que ele é o primeiro conteúdo do curso.</p>
+
+<p>Mas existe diferença entre ver o alfabeto e saber usá-lo. A maioria dos alunos consegue repetir as 26 configurações depois de alguns minutos de vídeo. O que quase ninguém consegue, no começo, é ler um nome soletrado em velocidade natural e fazer esse nome com a mão correta, sem pensar em cada letra.</p>
+
+<p>Isso acontece porque algumas letras são muito parecidas entre si. As diferenças estão nos pequenos detalhes: a posição do polegar, o quanto a mão fecha ou abre, a direção da mão, a profundidade e, em alguns casos, o movimento da mão. São detalhes que mudam a letra inteira.</p>
+
+<h4>As letras que vão te desafiar</h4>
+
+<ul>
+<li>T e F: o problema é onde o polegar fica em relação ao dedo indicador. Em cada uma ele ocupa um lugar diferente, e de frente a diferença quase desaparece.</li>
+<li>A, S e E: o problema também é o polegar, em três posições — encostado na lateral, por cima dos dedos, por baixo dos dedos.</li>
+<li>E e O: aqui o problema é a profundidade, a curvatura dos dedos. De frente as duas podem se parecer; de lado, não.</li>
+<li>G e Q: o problema é a direção da mão. O formato é o mesmo, a mão aponta para cima ou para baixo.</li>
+<li>D: o problema é qual dedo faz o círculo. Em D é o polegar com o dedo médio; com o indicador, vira outro gesto.</li>
+<li>H, K, P e V: o formato da mão é o mesmo em H-K-P, e o que muda é para onde ela aponta e o movimento da mão. Essas três letras se diferenciam do V pela posição do polegar.</li>
+</ul>
+
+<p>Na aula abaixo você conhece o alfabeto manual em Libras. Observe com atenção as letras citadas acima.</p>
+
+<div class="caixa-video">
+<p class="rotulo">Assista ao vídeo</p>
+<a href="https://www.youtube.com/watch?v=__fMtXL8knA">https://www.youtube.com/watch?v=__fMtXL8knA</a>
+</div>
+
+<h4>O que vem depois</h4>
+
+<p>Você vai praticar a leitura da soletração ao longo deste livro, porque ler soletração é uma habilidade que se constrói devagar.</p>
+
+<p>Mais para frente você vai gravar uma apresentação pessoal em Libras. Se você treinar as letras erradas por semanas, a correção depois custa muito mais. Por isso: antes de repetir, confira.</p>
+
+<h3>1.1. Identificar o alfabeto manual em Libras I</h3>
+
+<p>Abaixo há uma atividade para arrastar os sinais que estão do lado esquerdo, combinando com as letras do lado direito. Veja o tutorial onde explico como fazer a atividade:</p>
+
+<div class="caixa-video">
+<p class="rotulo">Assista ao vídeo</p>
+<a href="https://www.youtube.com/watch?v=PQWXk2A4O3Q">https://www.youtube.com/watch?v=PQWXk2A4O3Q</a>
+</div>
+
+<p class="moodle">[Atividade disponível no Moodle]</p>
+
+<p>Neste exercício há 4 letras para você associar: A-B-C-H. Elas são bem diferentes entre si.</p>
+
+<p>Você conseguiu acertar as letras do exercício acima? Se tiver alguma dificuldade, revise a aula anterior sobre o alfabeto manual, ou consulte a tabela com o alfabeto manual que está no Moodle.</p>
+
+<h3>1.2. Direção da mão pode mudar a letra</h3>
+
+<p>Agora vamos começar a identificar letras do alfabeto manual que são parecidas. Pequenos detalhes de direção da mão e dos dedos mudam a letra.</p>
+
+<p>Na imagem estão as letras G e Q. O formato da mão é idêntico nos dois casos. Entretanto, em G a mão aponta para cima e em Q a mão aponta para baixo.</p>
+
+<div class="legenda-imagem">
+<div class="espaco-imagem">Espaço reservado para a Imagem 1</div>
+<p class="legenda">Letras G e Q: o formato da mão é idêntico nos dois casos; em G a mão aponta para cima, em Q aponta para baixo.</p>
+<p class="fonte">Fonte: material do curso</p>
+</div>
+
+<h3>1.3. Identificar o alfabeto manual em Libras II</h3>
+
+<p>Abaixo, no exercício de arrastar e soltar, temos as letras Q-G-Z-P. Duas dessas letras são parecidas: o que muda é a direção da mão.</p>
+
+<p class="moodle">[Atividade disponível no Moodle]</p>
+
+<p>Você conseguiu perceber as semelhanças e diferenças? A mão pode ter o mesmo formato, o que chamamos de configuração da mão, mas com direção diferente pode ter significados diferentes. Se tiver dúvida, reveja a aula sobre o alfabeto manual.</p>
+
+<h3>1.4. O par F e T — mudança na posição do polegar</h3>
+
+<p>As letras F e T são muito parecidas no alfabeto manual da Libras. Em ambas o polegar encosta no dedo indicador que está dobrado. Na letra F o polegar fica "por fora" e na letra T o polegar fica "por dentro". Veja na imagem abaixo:</p>
+
+<div class="legenda-imagem">
+<div class="espaco-imagem">Espaço reservado para a Imagem 2</div>
+<p class="legenda">Letras F e T: em ambas o polegar encosta no dedo indicador dobrado; em F fica "por fora" e em T fica "por dentro".</p>
+<p class="fonte">Fonte: material do curso</p>
+</div>
+
+<h3>1.5. Identificar o alfabeto manual em Libras III</h3>
+
+<p>No exercício abaixo você encontra as letras F-J-O-T. Duas delas são bem parecidas: a diferença é a posição do polegar.</p>
+
+<p class="moodle">[Atividade disponível no Moodle]</p>
+
+<h3>1.6. O polegar no trio A — S — E</h3>
+
+<p>A posição do polegar é o que diferencia as letras A, S e E.</p>
+
+<p>Na letra A o polegar encosta na lateral da mão.</p>
+
+<p>Na letra S o polegar fica sobre os demais dedos, que estão fechados.</p>
+
+<p>Na letra E o polegar fica abaixo dos demais dedos, ora bem separado como na imagem abaixo, mas também pode estar bem encostado à ponta dos demais dedos. Varia conforme quem sinaliza.</p>
+
+<p>Veja a diferença entre essas letras do alfabeto manual e o detalhe da posição do polegar.</p>
+
+<div class="legenda-imagem">
+<div class="espaco-imagem">Espaço reservado para a Imagem 3</div>
+<p class="legenda">Letras A, S e E: a posição do polegar é o que diferencia as três — na lateral da mão em A, sobre os dedos em S e abaixo dos dedos em E.</p>
+<p class="fonte">Fonte: material do curso</p>
+</div>
+
+<h3>1.7. Identificar o alfabeto manual em Libras IV</h3>
+
+<p>No exercício de parear as letras A-M-N-S no jogo de arrasta e solta abaixo, observe a posição do polegar e dos dedos para identificar corretamente as letras.</p>
+
+<p class="moodle">[Atividade disponível no Moodle]</p>
+
+<h3>1.8. A profundidade que diferencia as letras E — O</h3>
+
+<p>As letras E e O, quando feitas isoladamente, podem ser diferenciadas com facilidade. Entretanto, na soletração de palavras em velocidade natural de sinalização, elas podem ser confundidas. No vídeo abaixo você vai aprender a perceber as diferenças sutis entre essas letras e a entender que a profundidade importa para compreender esses sinais.</p>
+
+<div class="caixa-video">
+<p class="rotulo">Assista ao vídeo</p>
+<a href="https://www.youtube.com/watch?v=zk58Ln4XV5M&t=1s">https://www.youtube.com/watch?v=zk58Ln4XV5M&amp;t=1s</a>
+</div>
+
+<h3>1.9. Diferenças entre as letras H — K — P</h3>
+
+<p>As letras H, K e P são feitas com o mesmo formato de mão, isto é, com a mesma configuração de mão. O que muda entre elas é a direção da mão e, em H e K, o movimento da mão. O P é o único dos três que não se move: se a mão se mexe, não é P. No vídeo abaixo você vai aprender a diferenciá-las e a evitar o erro mais comum, que é usar a mão em V no lugar dessas letras. O V é um gesto que o cérebro já sabe fazer, e é ele que pode aparecer quando a mão precisa ser rápida.</p>
+
+<div class="caixa-video">
+<p class="rotulo">Assista ao vídeo</p>
+<a href="https://www.youtube.com/watch?v=oUiRs3Z6Fjw">https://www.youtube.com/watch?v=oUiRs3Z6Fjw</a>
+</div>
+
+<p>Na imagem abaixo você pode observar a diferença entre as letras H-K-P-V no alfabeto manual e identificar as letras em que há movimento da mão indicado pelas setas.</p>
+
+<div class="legenda-imagem">
+<div class="espaco-imagem">Espaço reservado para a Imagem 4</div>
+<p class="legenda">Letras H, K, P e V: as setas indicam o movimento da mão em H e K; P não se move.</p>
+<p class="fonte">Fonte: material do curso</p>
+</div>
+
+<p>Perceba que a mão em V é igual ao gesto de vitória usado em campanhas políticas. Um formato de mão que o cérebro já conhece. A configuração da mão para fazer as letras H-K-P envolve o polegar, um formato novo para quem está começando em Libras. Por isso é comum, no início, o aluno trocar a configuração de mão ao soletrar. Um detalhe a observar.</p>
+
+<h3>1.10. A seleção dos dedos na letra D</h3>
+
+<p>A letra D é facilmente reconhecida. Entretanto, quem está começando em Libras pode mudar a seleção dos dedos no momento de fazer a configuração da mão. No vídeo abaixo aprenda:</p>
+<ul>
+<li>a fazer corretamente a letra D do alfabeto manual;</li>
+<li>a perceber a diferença sutil para o número 1;</li>
+<li>a perceber a diferença entre a letra D e o gesto OK.</li>
+</ul>
+
+<div class="caixa-video">
+<p class="rotulo">Assista ao vídeo</p>
+<a href="https://www.youtube.com/watch?v=RkbVpUUZsB8">https://www.youtube.com/watch?v=RkbVpUUZsB8</a>
+</div>
+
+<h3>1.11. Jogo da memória do alfabeto manual</h3>
+
+<p>O jogo da memória é uma atividade lúdica que vai ajudar você a memorizar os sinais. Veja o tutorial antes de fazer essa atividade. Há várias dicas.</p>
+
+<div class="caixa-video">
+<p class="rotulo">Assista ao vídeo</p>
+<a href="https://www.youtube.com/watch?v=lCFZpPfcFFk">https://www.youtube.com/watch?v=lCFZpPfcFFk</a>
+</div>
+
+<p>Agora encontre os pares das letras do português e do alfabeto manual. Você vai treinar sua percepção da diferença e da semelhança das letras D, E, H, K, O e P.</p>
+
+<p class="moodle">[Atividade disponível no Moodle]</p>
+
+<h3>1.12. Identificar letras especiais</h3>
+
+<p>O exercício abaixo é para você reconhecer a sinalização de letras diferentes, como o Ç e o dígrafo CH, que é feito mais rápido do que fazer as letras C e H em separado.</p>
+
+<p class="moodle">[Atividade disponível no Moodle]</p>
+
+<h3>1.13. Destreza no uso da soletração manual — nem tanto!</h3>
+
+<p>Ao longo do material de estudo teremos alguns momentos de descontração, de riso, pequenas pausas que são relevantes. Veja no vídeo abaixo o motivo dessas pausas.</p>
+
+<div class="caixa-video">
+<p class="rotulo">Assista ao vídeo</p>
+<a href="https://www.youtube.com/watch?v=MI_l1er70M0">https://www.youtube.com/watch?v=MI_l1er70M0</a>
+</div>
+
+<p>A soletração manual é usada em vários momentos, como veremos neste curso. Entretanto, ela não é apropriada para uma comunicação contínua e fluida. Veja a paródia que o ator Billy Kelman fez sobre o uso da soletração manual como recurso de comunicação plena.</p>
+
+<div class="caixa-video">
+<p class="rotulo">Assista ao vídeo</p>
+<a href="https://www.youtube.com/watch?v=nCOAkqS2_Ig">https://www.youtube.com/watch?v=nCOAkqS2_Ig</a>
+</div>
+
+<p>Mesmo com a legenda em inglês, dá para perceber que a soletração manual não é a mesma coisa que usar uma língua de sinais. Soletração serve para nomes de pessoas, lugares e ruas. Entretanto, não dá para soletrar uma palavra no meio de uma frase substituindo um sinal da Libras.</p>
+
+<p>Soletração manual é para casos pontuais.</p>
+
+<h3>1.14. Flashcards — Alfabeto Manual</h3>
+
+<p>Flashcards, ou cartões rápidos em uma tradução livre, é um método poderoso de memorização muito usado no aprendizado de línguas. Você poderá usar essa técnica no aprendizado de qualquer idioma. Nesta variação de flashcard, você vai treinar a sua compreensão da Libras.</p>
+
+<p>Veja o tutorial que explica como fazer esse tipo de atividade, depois faça o exercício abaixo.</p>
+
+<div class="caixa-video">
+<p class="rotulo">Assista ao vídeo</p>
+<a href="https://www.youtube.com/watch?v=daorp_E69lE">https://www.youtube.com/watch?v=daorp_E69lE</a>
+</div>
+
+<p>Nestes flashcards você deve identificar as letras, digitar a resposta, e a atividade corrige antes de seguir para frente.</p>
+
+<p>Lembre-se de perceber a posição do polegar e dos demais dedos.</p>
+
+<p class="moodle">[Atividade disponível no Moodle]</p>
+
+<h3>1.15. Fazendo a leitura de palavras soletradas</h3>
+
+<p>Aprender a fazer as letras do alfabeto e reconhecê-las individualmente é uma habilidade inicial. Colocar isso em prática na leitura de palavras é outra coisa.</p>
+
+<p>No exercício abaixo você tem um ditado: são 4 palavras, apresentadas uma por vez. Você deve digitar a palavra soletrada antes de seguir para a próxima.</p>
+
+<p class="moodle">[Atividade disponível no Moodle]</p>
+
+<p>Pontos sensíveis a observar: a posição do polegar, a posição dos demais dedos e a direção da mão são elementos que mudam a letra representada pelo alfabeto manual.</p>
+
+<p>Atenção ao item que traz um nome de rua: soletre todas as palavras que aparecem, incluindo a palavra Rua, e observe o til. A soletração inclui sinais que não são letras do alfabeto manual, e o til é um deles.</p>
+
+<p>Não é preciso se preocupar com maiúscula e minúscula: a correção não diferencia as duas.</p>
+
+<p>Se você errar, a palavra que você digitou e a palavra correta aparecem uma abaixo da outra. Compare as duas com atenção antes de seguir para o próximo item: é ali que você descobre qual letra não leu corretamente.</p>
+
+<h2>2. Números</h2>
+
+<p>Agora que você já aprendeu como fazer o alfabeto manual, gostaria que você aprendesse os números em Libras. Veja a aula abaixo:</p>
+
+<div class="caixa-video">
+<p class="rotulo">Assista ao vídeo</p>
+<a href="https://www.youtube.com/watch?v=4_xeQ-U8bPI">https://www.youtube.com/watch?v=4_xeQ-U8bPI</a>
+</div>
+
+<p>Se você quiser, abaixo deste livro há um arquivo intitulado "Alfabeto Manual e Números". Você pode fazer download e/ou imprimir. É um material para consulta rápida com o alfabeto manual e os números.</p>
+
+<h3>2.1. Exercício numerais</h3>
+
+<p>Faça o pareamento dos sinais com os números:</p>
+
+<p class="moodle">[Atividade disponível no Moodle]</p>
+
+<h3>2.2. Flashcards — alfabeto manual e números: parte 1</h3>
+
+<p>Nestes flashcards você identifica o número ou a letra, digita a resposta, e a atividade corrige antes de seguir para frente.</p>
+
+<p>Lembre-se de perceber a posição do polegar e dos demais dedos.</p>
+
+<p class="moodle">[Atividade disponível no Moodle]</p>
+
+<h3>2.3. Flashcards — alfabeto manual e números: parte 2</h3>
+
+<p>Nestes flashcards você identifica o número ou a letra, digita a resposta, e a atividade corrige antes de seguir para frente.</p>
+
+<p>Lembre-se de perceber a posição do polegar e dos demais dedos.</p>
+
+<p class="moodle">[Atividade disponível no Moodle]</p>
+
+<h3>2.4. Flash Cards — Alfabeto Manual e Números</h3>
+
+<p>Apenas ver a imagem com o alfabeto, ou assistir ao vídeo, não será suficiente para o seu aprendizado. VOCÊ precisa exercitar e, para isso, precisa de movimento.</p>
+
+<p>Então, levante-se! Pegue uma bola de meia, ou uma bola de tênis. Algo relativamente leve para você ficar jogando para o alto e pegar antes de cair no chão. Enquanto você cuida para o seu objeto não cair, você vai copiando o alfabeto e os números. Acredite, isso funciona com todas as pessoas; portanto, vai funcionar com você também.</p>
+
+<p>Se não ficou claro para você como fazer esse exercício, veja o vídeo que segue com o passo a passo. Depois, abaixo, há um vídeo com o alfabeto manual e números em sequência e em uma velocidade tranquila. Siga as orientações do primeiro vídeo para fazer o exercício. Faça esse exercício quantas vezes você achar necessário.</p>
+
+<div class="caixa-video">
+<p class="rotulo">Assista ao vídeo</p>
+<a href="https://www.youtube.com/watch?v=xi0g3Tyzo_E">https://www.youtube.com/watch?v=xi0g3Tyzo_E</a>
+</div>
+
+<p>Agora, pratique.</p>
+
+<div class="caixa-video">
+<p class="rotulo">Assista ao vídeo</p>
+<a href="https://www.youtube.com/watch?v=dUYwWgNTFSg">https://www.youtube.com/watch?v=dUYwWgNTFSg</a>
+</div>
+
+<p>Depois, seria interessante você voltar a essa atividade para refazê-la, pois o alfabeto é fácil, mas tem que treinar um pouco.</p>
+
+<h2>3. Encontrando erros na soletração</h2>
+
+<p>Ler a soletração manual e produzir a soletração manual são duas habilidades diferentes, e as duas dependem de você saber reconhecer quando uma letra está errada. Quem não sabe como é uma mão errada não consegue conferir a própria mão.</p>
+
+<p>Nesta atividade você vai assistir a treze nomes soletrados, um de cada vez. Para cada nome há três perguntas, na mesma página:</p>
+<ul>
+<li>Esta soletração está correta? Verdadeiro ou falso.</li>
+<li>Qual letra está errada? Se não houver letra errada, responda "nenhuma".</li>
+<li>Qual foi o problema? Posição do polegar, posição dos dedos, direção da mão, movimento da mão ou nenhuma.</li>
+</ul>
+
+<p>Não é possível mudar uma resposta depois de enviada, então leia com atenção antes de responder.</p>
+
+<p>Atenção: nem todos os nomes têm erro. Alguns estão corretos, e marcar erro onde não há conta como resposta errada. É parte do exercício saber aprovar uma soletração bem-feita.</p>
+
+<p>Quando o retorno da segunda pergunta indicar qual letra está errada, volte ao vídeo e assista de novo olhando só para aquela letra. Compare com o item do capítulo que a explica antes de responder a terceira pergunta.</p>
+
+<p>As letras que dão trabalho neste capítulo são as mesmas que dão trabalho na hora de produzir: T e F; A, S e E; E e O; G e Q; D; P. Se errar, o retorno diz o que estava errado e qual item do capítulo rever.</p>
+
+<p>A nota desta atividade você encontra no roteiro de estudos e no plano de ensino. Essa atividade tem como objetivo você chegar nas próximas atividades práticas de Libras já sabendo o que conferir na sua própria mão antes de enviar.</p>
+
+<p class="moodle">[Atividade disponível no Moodle]</p>
+
+<h2>Fechando a Unidade 2</h2>
+
+<p>Nesta unidade você aprendeu o alfabeto manual e os números em Libras. Treinou a leitura da soletração em ditados e flashcards, e começou a desenvolver o olhar para identificar erros na própria mão antes de enviar uma atividade.</p>
+
+<p>Você também viu que o alfabeto manual não é a Libras: é um recurso de ligação com o português escrito, usado em nomes próprios, ruas e palavras que ainda não têm sinal. E viu que soletração serve para casos pontuais, não para uma conversa inteira.</p>
+
+<p>Na próxima unidade você vai aprender a se apresentar em Libras.</p>
+
+<h2>Para continuar aprendendo</h2>
+
+<h4>Uma rotina curta, todos os dias</h4>
+
+<p>Aprender o alfabeto manual em uma semana não garante que você vai lembrar dele nas semanas seguintes. Por isso, vale criar uma rotina curta de treino.</p>
+
+<p>Reserve de cinco a dez minutos por dia. Escolha palavras do seu dia a dia — nomes de familiares, placas de trânsito, manchetes de jornal — e soletre cada uma no espaço à sua frente, sem olhar para a mão. Depois, confira se a configuração saiu certa.</p>
+
+<h4>Treinar sem olhar para a mão</h4>
+
+<p>No começo, todo mundo olha para a própria mão enquanto soletra. Isso é normal. Mas, em uma conversa real, você não vai poder olhar: precisa acompanhar o rosto de quem está na sua frente.</p>
+
+<p>Por isso, treine também sem olhar. Soletre uma palavra olhando para a frente, como se estivesse conversando com alguém. Se errar, recomece. Com o tempo, a mão aprende o caminho sozinha.</p>
+
+<h4>Voltar ao que você errou</h4>
+
+<p>Sempre que errar uma letra em um ditado ou em um flashcard, volte ao item do capítulo que explica aquela letra. Não adianta repetir a palavra inteira várias vezes: o que resolve é treinar a letra específica que está falhando.</p>
+
+<p>Anote na sua ficha de anotação as letras que mais dão trabalho. Na revisão, comece por elas.</p>
+
+</main>
+
+<footer class="rodape">
+<p>INTRODUÇÃO A LIBRAS · Unidade 2 · Câmpus Florianópolis-Continente</p>
+<p>Instituto Federal de Santa Catarina · Novembro de 2026</p>
+</footer>
+</body>
+</html>
